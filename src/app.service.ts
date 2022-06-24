@@ -17,8 +17,8 @@ export class AppService {
      try {
          const user = this.jwtService.verify(token)
          if(user){
-             const newToken = this.jwtService.sign(user)
-             this.tokens.push(newToken)
+             // const newToken = this.jwtService.sign(user)
+             this.tokens.push(token)
          }else{
              return null
          }
